@@ -3,7 +3,8 @@ import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-// Extend HttpServlet class
+@WebServlet(name="Hello",urlPatterns={"/Hello"})
+
 public class Hello extends HttpServlet {
 
    private String message;
