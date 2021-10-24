@@ -14,12 +14,12 @@
   </welcome-file-list>
 
   <servlet>
-     <servlet-name>Hello</servlet-name>
-     <servlet-class>Hello</servlet-class>
+     <servlet-name>hello</servlet-name>
+     <servlet-class>hello</servlet-class>
   </servlet>
   <servlet-mapping>
-     <servlet-name>Hello</servlet-name>
-     <url-pattern>/Hello</url-pattern>
+     <servlet-name>hello</servlet-name>
+     <url-pattern>/hello</url-pattern>
   </servlet-mapping>
 
 </web-app>
