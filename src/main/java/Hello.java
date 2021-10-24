@@ -1,25 +1,30 @@
-// Import required java libraries
-import java.io.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
+package net.codejava.javaee;
 
+import java.io.IOException;
+
+/**
+ * Servlet implementation class Hello
+ */
+@WebServlet("/hello")
 public class Hello extends HttpServlet {
-
-   private String message;
-
-   public void init() throws ServletException {
-      // Do required initialization
-      message = "Hello World: src/main/java/Hello.java";
+   private static final long serialVersionUID = 1L;
+   
+   /**
+    * @see HttpServlet#HttpServlet()
+    */
+   public Hello() {
+	   super();
    }
-
-   public void doGet(HttpServletRequest request, HttpServletResponse response)
-      throws ServletException, IOException {
-
-      // Set response content type
-      response.setContentType("text/html");
-
-      // Actual logic goes here.
-      PrintWriter out = response.getWriter();
-      out.println("<h1>" + message + "</h1>");
+   
+   /**
+    * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+    */
+   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	   String yourName = request.getParameter("yourName");
+	   
+	   PrintWriter writer = response.getWriter();
+	   writer.println("<h1>Hello " + yourName + "</h1>");
+	   writer.close();    
    }
+   
 }
