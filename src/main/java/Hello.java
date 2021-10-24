@@ -3,6 +3,7 @@ import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
+@WebServlet("/Hello")
 public class Hello extends HttpServlet {
 
    private String message;
